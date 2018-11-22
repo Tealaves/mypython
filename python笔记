@@ -44,6 +44,21 @@ global是一个命名空间的声明，它告诉Python函数打算生成一个�
 不可变参数“通过值”进行传递。像整数和字符串这样的对象是通过对象引用而不是拷贝进行传递的。
 可变对象是通过“指针”进行传递的。列表和字典这样的可变对象能够在函数内部进行原处的改变
 
+特定的参数匹配模型
+
+func(value)
+func(name=value)
+func(*sequence)
+func(**dict)
+def func(name)
+def func(name=value)
+def func(*name)
+def func(**name)
+def func(*args,name)
+def func(*,name=value)
+
+
+
 
 
 函数的设计概念

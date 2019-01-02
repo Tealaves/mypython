@@ -22,7 +22,7 @@ def money(N,width=0):
     format number N for display with commas, 2 decimal digits,
     leading $ and sign, and optional padding: $ -xxx,yyy,zz
     """
-    sign = '_' if N < 0 else ''
+    sign = '-' if N < 0 else ''
     N = abs(N)
     whole = commas(int(N))
     fract = ('%.2f' % N)[-2:]
@@ -48,11 +48,11 @@ if __name__ == '__main__':
         for test in tests:
             print ('%s [%s]' % (money(test,17), test))
         
-        import sys
-        if len(sys.argv) == 1:
-            selftest()
-        else:
-            print(money(float(sys.argv[1]),int(sys.argv[2])))
+    import sys
+    if len(sys.argv) == 1:
+        selftest()
+    else:
+        print(money(float(sys.argv[1]),int(sys.argv[2])))
 
 
 
